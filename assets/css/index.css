@@ -1,10 +1,3 @@
-/* 
-
-TemplateMo 586 Scholar
-
-https://templatemo.com/tm-586-scholar
-
-*/
 
 /* ---------------------------------------------
 Table of contents
@@ -119,6 +112,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background-color: white;
+}
+
 ::selection {
   background: #7a6ad8;
   color: #fff;
@@ -152,7 +149,7 @@ body {
 }
 
 .section-heading h6 {
-  color: #7a6ad8;
+  color: #176dcf;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
@@ -161,7 +158,7 @@ body {
 .main-button a {
   display: inline-block;
   background-color: #fff;
-  color: #7a6ad8;
+  color: #ba275d;
   font-size: 14px;
   font-weight: 500;
   height: 40px;
@@ -172,7 +169,7 @@ body {
 }
 
 .main-button a:hover {
-  background-color: #7a6ad8;
+  background-color: #ba275d;
   color: #fff;
 }
 
@@ -188,7 +185,7 @@ Pre-loader Style
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.99);
+  background-color: white;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -249,7 +246,7 @@ Pre-loader Style
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #7a6ad8;
+  background: black;
   border-radius: 50%;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -276,6 +273,18 @@ Pre-loader Style
   border-radius: 50%;
 }
 
+.preloader-inner .dots .second {
+  background-color: #4364b0;
+}
+
+.preloader-inner .dots .third {
+  background-color: #b34081;
+}
+
+.preloader-inner .dots .fourth {
+  background-color: #3ab0a8;
+}
+
 
 
 /* 
@@ -285,7 +294,7 @@ Header Style
 */
 
 .background-header {
-  background-color: #7a6ad8 !important;
+  background-color: #375cb3 !important;
   border-radius: 0px 0px 25px 25px;
   height: 80px!important;
   position: fixed!important;
@@ -302,7 +311,7 @@ Header Style
 .header-area {
   position: absolute;
   background-color: transparent;
-  top: 40px;
+  top: 25px;
   left: 0;
   right: 0;
   z-index: 100;
@@ -341,6 +350,7 @@ Header Style
 
 .header-area .main-nav ul.nav {
   border-radius: 0px 0px 25px 25px;
+  border-top: none;
   flex-basis: 100%;
   margin-right: 0px;
   justify-content: right;
@@ -542,7 +552,7 @@ Header Style
     font-weight: 400;
     color: #1e1e1e;
     background-color: #f1f0fe;
-     border-radius: 0px 0px 25px 25px;
+    border-radius: 0px 0px 25px 25px;
   }
   .background-header .main-nav .nav li,
   .header-area .main-nav .nav li {
@@ -636,11 +646,11 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url(../images/banner-white.png);
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 170px 0px 120px 0px;
+  padding: 130px 0px 100px 0px;
 }
 
 .main-banner .item-1 {
@@ -655,24 +665,33 @@ Banner Style
   background-image: url(../images/banner-item-03.jpg);
 }
 
+.main-banner .item-4 {
+  background-image: url(../images/banner-item-03.jpg);
+}
+
+.main-banner .item-5 {
+  background-image: url(../images/banner-item-03.jpg);
+}
+
 .main-banner .item {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   border-radius: 25px;
-  padding: 100px 100px;
+  padding: 90px 100px;
   margin-left: 130px;
 }
 
 .main-banner .item span.category {
-  background-color: #7a6ad8;
+  background-color: #ba275d;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
   text-transform: uppercase;
-  padding: 5px 15px;
+  padding: 7px 20px;
   border-radius: 20px;
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .main-banner .item h2 {
@@ -681,7 +700,7 @@ Banner Style
   color: #fff;
   line-height: 70px;
   width: 60%;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .main-banner .item p {
@@ -691,7 +710,7 @@ Banner Style
 
 .main-banner .item .buttons {
   display: flex;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .main-banner .item .buttons .main-button {
@@ -700,7 +719,7 @@ Banner Style
 
 .main-banner .item .buttons .main-button a {
   font-size: 14px;
-  color: #7a6ad8;
+  color: #ba275d;
   background-color: #fff;
   display: inline-block;
   height: 50px;
@@ -784,7 +803,7 @@ Services Style
   display: inline-block;
   text-align: center;
   line-height: 190px;
-  background-color: #7a6ad8;
+  background-color: #8a2047;
   border-radius: 50%;
   position: absolute;
   right: 0;
@@ -836,7 +855,7 @@ About Style
   bottom: 0;
   right: 0;
   z-index: -1;
-  width: 84%;
+  width: 65%;
   height: 100%;
   background-color: #f1f0fe;
   content: '';
@@ -847,8 +866,8 @@ About Style
 .accordion {
   margin-top: -40px;
   margin-bottom: -40px;
-  background-color: #7a6ad8;
-  border-radius: 40px;
+  background-image: linear-gradient(to top, #004a45, #004351, #003a58, #0e2e57, #331e49, #381742, #3c0e3b, #3f0332, #38073a, #2e0d41, #1f1248, #01174d);
+  border-radius: 50px 100px 100px 50px;
   padding: 80px 50px 50px 50px;
 }
 
@@ -866,7 +885,7 @@ About Style
 }
 
 .accordion-button:not(.collapsed) {
-  color: #7a6ad8;
+  color: #ff8cb6;
   background-color: #fff;
 }
 
@@ -888,7 +907,7 @@ h2.accordion-header button {
   text-align: center;
   line-height: 30px;
   border-radius: 50%;
-  background-color: #7a6ad8;
+  background-color: #ba275d;
   color: #fff;
 }
 
@@ -935,7 +954,7 @@ Facts Style
   z-index: -1;
   width: 95%;
   height: 100%;
-  background-color: #7a6ad8;
+  background-color: #1c2f5e;
   content: '';
   border-top-right-radius: 500px;
   border-bottom-right-radius: 500px;
@@ -999,10 +1018,7 @@ Testimonials Style
   height: 100%;
   background-color: #f1f0fe;
   content: '';
-  border-top-left-radius: 500px;
-  border-top-right-radius: 500px;
-  border-bottom-left-radius: 500px;
-  border-bottom-right-radius: 500px;
+  border-radius: 30%;
 }
 
 .testimonials .section-heading {
@@ -1016,7 +1032,7 @@ Testimonials Style
 }
 
 .testimonials .item {
-  background-color: #7a6ad8;
+  background-color: #1c2f5e;
   border-radius: 25px;
   padding: 80px;
 }
@@ -1066,7 +1082,7 @@ Testimonials Style
   line-height: 50px;
   font-size: 24px;
   display: inline-block;
-  color: #7a6ad8;
+  color: #1c2f5e;
   background-color: #fff;
   border-radius: 50%;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.10);
@@ -1104,21 +1120,21 @@ Contact Style
   bottom: 0;
   left: 0;
   z-index: -1;
-  width: 65%;
+  width: 55%;
   height: 100%;
   background-color: #f1f0fe;
   content: '';
-  border-top-right-radius: 500px;
-  border-bottom-right-radius: 500px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 
-.contact-us  .section-heading {
+.contact-us .section-heading {
   margin-right: 110px;
   margin-bottom: 0px;
 }
 
-.contact-us  .section-heading p {
+.contact-us .section-heading p {
   margin-top: 50px;
 }
 
@@ -1135,7 +1151,7 @@ Contact Style
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #7a6ad8;
+  background-color: #8a2047;
   width: 80px;
   padding: 30px 8px;
   line-height: 25px;
@@ -1157,7 +1173,7 @@ Contact Style
 
 .contact-us .special-offer h6 {
   font-size: 15px;
-  color: #4a4a4a;
+  color: grey;
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 15px;
@@ -1165,7 +1181,7 @@ Contact Style
 
 .contact-us .special-offer h6 em {
   font-style: normal;
-  color: #7a6ad8;
+  color: #367fd1;
   font-weight: 600;
 }
 
@@ -1176,28 +1192,32 @@ Contact Style
 
 .contact-us .special-offer h4 em {
   font-style: normal;
-  color: #7a6ad8;
+  color: #ba275d;
 }
 
-.contact-us .special-offer a {
+.contact-us .special-offer span.wallet {
   position: absolute;
   right: 30px;
   top: 35px;
-  width: 50px;
-  height: 50px;
   display: inline-block;
   text-align: center;
   line-height: 50px;
-  background-color: #7a6ad8;
+  background-color: #8a2047;
   color: #fff;
   border-radius: 50%;
+  padding: 15px 20px;
+}
+
+.contact-us .special-offer span.wallet i {
+  font-size: 30px;
 }
 
 .contact-us .contact-us-content {
   border-radius: 25px;
   padding: 80px;
-  background-color: #7a6ad8;
+  background-image: linear-gradient(to top, #004a45, #004351, #003a58, #0e2e57, #331e49, #381742, #3c0e3b, #3f0332, #38073a, #2e0d41, #1f1248, #01174d);
   position: relative;
+  right: 15%;
   z-index: 1;
 }
 
@@ -1270,10 +1290,10 @@ Contact Style
   height: 50px;
   font-size: 14px;
   font-weight: 600;
-  background-color: #fff;
+  background-color: #ba275d;
   padding: 0px 25px;
   border-radius: 25px;
-  color: #7a6ad8;
+  color: white;
   transition: all .4s;
   position: relative;
   z-index: 3;
@@ -1316,25 +1336,31 @@ Footer Style
 
 footer {
   margin-top: 150px;
+  padding-top: 30px;
+  padding-bottom: 20px;
   position: relative;
-  background-color: #7a6ad8;
+  background-color: #375cb3;
   vertical-align: middle;
   min-height: 150px;
-  border-radius: 150px 150px 0px 0px;
+  border-radius: 75px 150px 0px 0px;
 }
 
 footer p {
   text-align: center;
-  line-height: 150px;
   color: #fff;
   font-weight: 400;
+  padding: 0 50px;
 }
 
 footer p a {
+  display: inline-block;
   color: #fff;
   transition: all .3s;
   position: relative;
   z-index: 3;
+  margin-top: 50px;
+  text-decoration: underline !important;
+  text-decoration-color: #c9c1ab !important;
 }
 
 footer p a:hover {
@@ -1366,13 +1392,19 @@ body {
 
 @media (max-width: 767px) {
   .header-area {
-    top: 0px;
+    top: 0 !important;
+  }
+  .header-area .main-nav ul.nav {
+    border: 1px solid #ddd;
+  }
+  .header-area .main-nav .nav li:last-child a {
+    border-bottom: 1px solid #ddd;
   }
   .header-area .main-nav .logo h1 {
     border-right: none;
   }
   .main-banner .item {
-    padding: 80px 30px 120px 30px !important;
+    padding: 60px 30px 80px 30px !important;
   }
   .main-banner .owl-nav {
     left: 30px !important;
@@ -1387,6 +1419,9 @@ body {
 }
 
 @media (max-width: 992px) {
+  .header-area {
+    top: 18px;
+  }
   .header-area .main-nav .logo h1 {
     font-size: 34px;
   }
@@ -1397,7 +1432,7 @@ body {
     padding-top: 100px;
   }
   .main-banner .item {
-    padding: 100px 60px 140px 60px;
+    padding: 60px 60px 80px 60px;
     margin-left: 0px;
     text-align: center;
   }
@@ -1493,7 +1528,7 @@ body {
     margin-top: 40px;
   }
   .testimonials .item {
-    padding: 40px 40px 60px 40px;
+    padding: 40px 80px 60px 40px;
   }
   .testimonials .item h4 {
     font-size: 17px;
@@ -1503,8 +1538,13 @@ body {
   }
   .testimonials .owl-nav {
     right: 10px;
-    top: 65%;
   }
+  
+  .testimonials .owl-nav .owl-prev i,
+  .testimonials .owl-nav .owl-next i {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+  }  
   .events {
     margin-top: 80px;
   }
@@ -1556,15 +1596,14 @@ body {
   .contact-us .special-offer h4 {
     font-size: 17px;
   }
-  .contact-us .special-offer a {
-    width: 40px;
-    height: 40px;
+  .contact-us .special-offer span.wallet {
     line-height: 40px;
     top: 15px;
     right: 15px;
   }
   .contact-us .contact-us-content {
     padding: 30px;
+    right: 0;
   }
   footer {
     margin-top: 30px;
@@ -1578,4 +1617,120 @@ body {
   .fun-facts:before {
     width: 95%;
   }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body, .js-preloader {
+    background-color: black;
+  }
+  
+  .preloader-inner .dot {
+    background-color: white;
+  }
+  
+  .main-banner {
+    background-image: url(../images/banner-black.png);
+  }
+  
+  .main-button a {
+    background-color: black;
+    color: #ff8cb6;
+  }  
+  
+  .main-banner .item .buttons .main-button a {
+    background-color: black;
+    color: #ff8cb6;
+  }
+  
+  .services .service-item .main-content {
+    background-color: #1c2f5e;
+  }
+  
+  .services .service-item h4,
+  .services .service-item p {
+    color: white !important;
+  }
+  
+  .accordion-item,
+  h2.accordion-header button {
+    background-color: black;
+    color: white;
+  }
+  
+  .accordion-body {
+    color: white;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: black;
+  }
+  
+  .about-us:before,
+  .contact-us:before, 
+  .testimonials:before {
+    background-color: #8a2047;
+  }
+  
+  .section-heading h2, .section-heading p {
+    color: white;
+  }
+  
+  .section-heading h6 {
+    display: inline-block;
+    color: white;
+    background-color: #1c2f5e;
+    padding: 8px 14px;
+    border-radius: 10px;
+  }
+  
+  .contact-us .special-offer h4 {
+    color: white;
+  }
+  
+  .contact-us .special-offer h4 em {
+    color: #ff8cb6;
+  }
+  
+  .contact-us .special-offer {
+    background-color: #1c2f5e;
+  }
+  
+  .special-offer h6 {
+    background-color: black;
+  }
+  
+  .testimonials .owl-nav .owl-prev i,
+  .testimonials .owl-nav .owl-next i {
+    background-color: black;
+    color: white;
+  }
+  
+  .main-banner .owl-nav .owl-prev i,
+  .main-banner .owl-nav .owl-next i {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  @media (max-width: 767px) {
+     .header-area .main-nav ul.nav {
+       background-color: black;
+     }
+     
+     .header-area .main-nav .nav li a {
+       color: white;
+       background-color: black;
+     }
+     
+     .header-area .main-nav .nav li a.active {
+       color: white !important;
+       background-color: darkgrey;
+     }
+     
+     .section-heading h6 {
+       color: #4099ff;
+       background-color: black;
+     }
+  }
+
 }
