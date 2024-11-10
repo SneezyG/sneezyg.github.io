@@ -46,7 +46,10 @@
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
-                        <h1>Scholar</h1>
+                        <h1>
+                         <img src="assets/images/logo-icon.webp" />
+                          TBC
+                        </h1>
                     </a>
                     <!-- ***** Logo End ***** -->
 
@@ -419,26 +422,32 @@
         </div>
         <div class="col-lg-6">
           <div class="contact-us-content">
-            <form id="contact-form" action="" method="post">
+            <form id="contact-form" method="post">
               <div class="row">
                 <div class="col-lg-12">
                   <fieldset>
-                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                    <input type="name" name="entry.268879950" id="name" placeholder="Your Name..." required>
                   </fieldset>
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                    <input type="text" name="entry.1072446485" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required>
                   </fieldset>
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                    <textarea name="entry.1553977351" id="message" placeholder="Your Message..." required></textarea>
                   </fieldset>
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
+                    <button type="submit" id="form-submit" class="orange-button sent-msg"><span>Send Message Now<span></button>
+                    <br>
+                    <p class="sent">
+                      <span class="star"> &#10042 </span>
+                      <span>Thanks for contacting us<span>
+                      <span class="star"> &#10042 </span>
+                    </p>
                   </fieldset>
                 </div>
               </div>
@@ -452,11 +461,11 @@
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2036 Scholar Organization. All rights reserved.</p>
+        <p>Copyright © 2024 TBC SOLUTIONS. All rights reserved.</p>
         <p>
-          <a href="#" download="TBC_Privacy_Policy.pdf"> Privacy Policy </a>
+          <a href="assets/policies/privacy-merged.pdf" download="TBC_Privacy_Policy.pdf"> Privacy Policy </a>
           <br>
-          <a href="#" download="TBC_Refund_Policy"> Refund Policy </a>
+          <a href="assets/policies/refund-merged.pdf" download="TBC_Refund_Policy.pdf"> Refund Policy </a>
         </p>
       </div>
     </div>
@@ -470,6 +479,7 @@
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/contact.js"></script>
 
   </body>
 </html>
