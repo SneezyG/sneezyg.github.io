@@ -323,7 +323,8 @@ Header Style
 
 .header-area .main-nav {
   background: transparent;
-  display: flex
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-area .main-nav .logo {
@@ -356,9 +357,7 @@ Header Style
 .header-area .main-nav ul.nav {
   border-radius: 0px 0px 25px 25px;
   border-top: none;
-  flex-basis: 100%;
   margin-right: 0px;
-  justify-content: right;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -405,18 +404,12 @@ Header Style
 }
 
 .header-area .main-nav .nav li:hover a {
-  opacity: 0.8;
-}
-.header-area .main-nav .nav li a.active {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.10);
-  opacity: 1;
+   color: #fff;
+   background-color: rgba(255, 255, 255, 0.10);
+   opacity: 1;
 }
 
 .background-header .main-nav .nav li:hover a {
-  opacity: 0.8;
-}
-.background-header .main-nav .nav li a.active {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.10);
   opacity: 1;
@@ -1638,8 +1631,9 @@ body {
   }
   .contact-us .special-offer span.wallet {
     line-height: 40px;
-    top: 15px;
-    right: 15px;
+    top: 7px;
+    right: 10px;
+    padding: 10px 15px 7px 15px;
   }
   .contact-us .contact-us-content {
     padding: 30px;
@@ -1767,7 +1761,7 @@ body {
        background-color: black;
      }
      
-     .header-area .main-nav .nav li a.active {
+     .header-area .main-nav .nav li:hover a {
        color: white !important;
        background-color: darkgrey;
      }
