@@ -140,7 +140,7 @@ body {
   font-weight: 600;
   text-transform: capitalize;
   margin: 20px 0;
-  line-height: 44px;
+  line-height: 50px;
 }
 
 .section-heading h2 em {
@@ -153,6 +153,10 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.section-heading p a {
+  color: #176dcf;
 }
 
 .main-button a {
@@ -648,7 +652,7 @@ Banner Style
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 130px 0px 100px 0px;
+  padding: 130px 0 100px 0;
 }
 
 .main-banner .item-1 {
@@ -972,25 +976,15 @@ Facts Style
 
 .fun-facts .counter {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .fun-facts h2 {
   color: #fff;
-  font-size: 48px;
+  font-size: 30px;
   font-weight: 700;
-}
-
-.fun-facts h2::after {
-  content: '+';
-  margin-left: 5px;
-}
-
-.fun-facts p {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  margin-top: 15px;
+  margin: 50px 0;
+  text-transform: uppercase;
 }
 
 
@@ -1046,13 +1040,15 @@ Testimonials Style
 
 .testimonials .item img {
   border-radius: 50%;
-  max-width: 100px;
+  max-width: 70px;
   float: left;
   margin-right: 25px;
+  position: relative;
+  bottom: 5px;
 }
 
 .testimonials .item span {
-  display: inline-block;
+  display: block;
   margin-top: 20px;
   font-size: 15px;
   color: #fff;
@@ -1462,7 +1458,7 @@ body {
     border-right: none;
   }
   .main-banner {
-    padding-top: 100px;
+    padding-top: 120px;
   }
   .main-banner .item {
     padding: 60px 60px 80px 60px;
@@ -1718,6 +1714,11 @@ body {
     border-radius: 10px;
   }
   
+  .section-heading p a {
+    color: white;
+    text-decoration: underline !important;
+  }
+  
   .contact-us .special-offer h4 {
     color: white;
   }
@@ -1769,6 +1770,10 @@ body {
      .section-heading h6 {
        color: #4099ff;
        background-color: black;
+     }
+     
+     .section-heading p a {
+       color: #4099ff;
      }
   }
 
