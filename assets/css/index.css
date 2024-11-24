@@ -887,7 +887,7 @@ About Style
 }
 
 .accordion-button:not(.collapsed) {
-  color: #ff8cb6;
+  color: #ba275d;
   background-color: #fff;
 }
 
@@ -1243,7 +1243,7 @@ Contact Style
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background-color: rgba(249, 235, 255, 0.15);
+  background-color: rgba(169, 169, 169, 0.2);
   border: none;
   outline: none;
   font-weight: 300;
@@ -1263,7 +1263,7 @@ Contact Style
   width: 100%;
   height: 120px;
   border-radius: 25px;
-  background-color: rgba(249, 235, 255, 0.15);
+  background-color: rgba(169, 169, 169, 0.2);
   border: none;
   outline: none;
   font-weight: 300;
@@ -1693,6 +1693,7 @@ body {
   }
   
   .accordion-button:not(.collapsed) {
+    color: #ff8cb6;
     background-color: black;
   }
   
