@@ -1,2 +1,2 @@
 # tbc-solutions
-A website repo for my tbc business solution
+A website repo for my TBC business solution
