@@ -128,7 +128,6 @@ body {
 
 .section {
   padding-top: 30px;
-  margin-top: 120px;
 }
 
 .section-heading {
@@ -789,13 +788,17 @@ Services Style
 --------------------------------------------- 
 */
 
+.services {
+  margin-top: 50px;
+}
+
 .services .service-item:hover .icon img {
   margin-top: -10px;
 }
 
 .services .service-item {
   position: relative;
-  margin-top: 95px;
+  margin-top: 100px;
 }
 
 .services .service-item .icon {
@@ -844,10 +847,14 @@ About Style
 --------------------------------------------- 
 */
 
+#about {
+  margin-bottom: 180px;
+}
+
 .about-us {
   position: relative;
   padding: 0px;
-  margin-top: 130px;
+  margin-top: 180px;
 }
 
 .about-us:before {
@@ -943,8 +950,10 @@ Facts Style
 
 .fun-facts {
   position: relative;
-  padding: 120px 0px 80px 0px;
+  padding: 120px 0px;
   overflow: hidden;
+  margin-top: 180px;
+  margin-bottom: 180px;
 }
 
 .fun-facts:before {
@@ -996,7 +1005,6 @@ Testimonials Style
 .testimonials {
   position: relative;
   padding: 80px 0px;
-  margin-top: 120px;
 }
 
 .testimonials:before {
@@ -1102,7 +1110,7 @@ Contact Style
 */
 
 .contact-us {
-  margin-top: 120px;
+  margin-top: 180px;
   position: relative;
   padding: 50px 0px;
 }
@@ -1363,7 +1371,7 @@ Footer Style
 */
 
 footer {
-  margin-top: 150px;
+  margin-top: 180px;
   padding-top: 30px;
   padding-bottom: 20px;
   position: relative;
@@ -1450,6 +1458,12 @@ body {
 }
 
 @media (max-width: 992px) {
+  #about {
+    margin-bottom: 120px;
+  }
+  footer {
+    margin-top: 150px;
+  }
   .header-area {
     top: 18px;
   }
@@ -1496,12 +1510,6 @@ body {
     position: absolute;
     left: 65px;
   }
-  .services {
-    margin-top: 80px;
-  }
-  .about-us {
-    margin-top: 100px;
-  }
   .accordion {
     padding: 40px 25px 10px 25px;
   }
@@ -1537,10 +1545,6 @@ body {
     display: block;
     margin: 12px 5px;
   }
-  .fun-facts {
-    margin-top: 70px;
-    margin-bottom: 150px;
-  }
   .fun-facts::before {
     width: 95%;
   }
@@ -1551,12 +1555,10 @@ body {
     margin-bottom: 140px;
   }
   .testimonials {
-    margin-top: -50px;
     padding: 0px;
   }
   .testimonials .section-heading {
     margin-left: 0px;
-    margin-top: 40px;
   }
   .testimonials .item {
     padding: 40px 80px 60px 40px;
@@ -1614,6 +1616,7 @@ body {
   }
   .contact-us {
     padding-top: 20px;
+    margin-top: 130px;
   }
   .contact-us .section-heading {
     margin-right: 0px;
@@ -1636,9 +1639,6 @@ body {
   .contact-us .contact-us-content {
     padding: 30px;
     right: 0;
-  }
-  footer {
-    margin-top: 30px;
   }
 }
 
