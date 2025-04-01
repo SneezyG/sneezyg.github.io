@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+         body {
+            background-color: rgb(246, 250, 255);
+            color: rgb(51, 51, 50);
+            letter-spacing: 0.9px;
+            word-spacing: 0.9px;
+            font-size: 18px;
+         }
+
+         header {
+            margin-bottom: 50px;
+         }
+
+        .head-cont {
+            height: 200px;
+            width: 70%;
+            background: url("pinger.webp") no-repeat center;
+            background-size: cover;
+            border-radius: 10px;
+            margin: auto;
+            color: rgb(238, 237, 237);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .head-cont > b {
+            font-size: 30px;
+            text-shadow: -2px -2px 0 rgb(122, 1, 1), 2px -2px 0 rgb(122, 1, 1), 
+            -2px 2px 0 rgb(122, 1, 1), 2px 2px 0 rgb(122, 1, 1);
+        }
+
+        .head-cont > b.single {
+            font-size: 60px
+        }
+
+        .project {
+            padding: 0 50px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .content > ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content > ul li {
+            margin-bottom: 10px;
+        }
+
+        main > hr {
+            margin: 30px 0 30px 0;
+        }
+
+        .project > p {
+            padding: 0 20px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .head-cont {
+                width: 100%;
+            }
+
+            .project {
+                padding: 0 20px;
+            }
+        }
+        
+
+        </style>
+
+        <title>The Pinger Project</title>
+
+    </head>
+
+    <body>
+
+        <header>
+            <div class="head-cont">
+                <b>PING</b>
+                <b class="single">A</b>
+                <b>DANGER</b>
+            </div>
+        </header>
+
+        <main>
+            <section class="project">
+                <h2>Project Description:</h2>
+                <p><b>Danger Alert System</b> is a robust Python and React-based safety solution designed for large industrial
+                     sites. It enables employees to instantly alert the safety department about threats, dangers, or 
+                     emergency situations, ensuring a swift response. This modern alternative to traditional alert 
+                     systems enhances workplace safety with real-time notifications, intuitive user experience, and 
+                     reliable communication.</p>
+            </section>
+
+            <hr>
+
+            <section class="content">
+                <h3>Table of Content:</h3>
+                <ul>
+                  <li><a href="/" title="See requirements, user personas, data model and more">Technical Details</a></li>
+                  <li><a href="/" title="See user flow, UX flow. UI design and more">UI/UX Designs</a></li>
+                  <li><a href="/" title="See the codes, libraries and assets">Code Repository</a></li>
+                  <li><a href="/" title="See the application in action">Video Snapshots</a></li>
+                  <li><a href="/" title="comming soon">Try it out</li>
+                </ul>
+            </section>
+        </main>
+
+
+
+
+    </body>
+</html>
