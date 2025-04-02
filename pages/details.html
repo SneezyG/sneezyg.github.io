@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+         body {
+            background-color: rgb(246, 250, 255);
+            color: rgb(51, 51, 50);
+            letter-spacing: 0.9px;
+            word-spacing: 0.9px;
+            line-height: 24px;
+            font-size: 18px;
+         }
+
+         header {
+            margin-bottom: 50px;
+         }
+
+         h2, .items-header {
+            color: rgb(54, 46, 1);
+         }
+
+         .icon-img {
+            width: 30px;
+            position: relative;
+            top: 5px;
+         }
+
+         main {
+            margin-bottom: 200px;
+         }
+
+        .head-cont {
+            height: 130px;
+            width: 70%;
+            background: url("/asset/pinger.webp") no-repeat center;
+            background-size: cover;
+            border-radius: 10px;
+            margin: auto;
+            color: rgb(238, 237, 237);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .head-cont > b {
+            font-size: 25px;
+            text-shadow: -2px -2px 0 rgb(122, 1, 1), 2px -2px 0 rgb(122, 1, 1), 
+            -2px 2px 0 rgb(122, 1, 1), 2px 2px 0 rgb(122, 1, 1);
+        }
+
+        .head-cont > b.single {
+            font-size: 50px
+        }
+
+        header > ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        header > ul li {
+            display: inline-block;
+            padding: 0 30px;
+            margin-top: 10px;
+        }
+
+        .project {
+            padding: 0 50px;
+        }
+
+        .project .inner-items {
+            margin-top: 10px;
+        }
+
+        .project .inner-items > li {
+            margin-bottom: 7px;
+        }
+
+        .project .outer-item {
+            margin-bottom: 15px;
+        }
+
+        main > hr {
+            margin: 50px 0 40px 0;
+        }
+
+        .active-link {
+            padding: 5px 20px;
+            border-radius: 6px;
+            color: white;
+            background-color: rgb(165, 141, 3); 
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            header {
+                margin-bottom: 60px;
+            }
+
+            .head-cont {
+                width: 100%;
+            }
+
+            .project {
+                padding: 0 20px;
+            }
+
+            header > ul > li {
+                padding: 0 15px;
+            }
+        }
+        
+
+        </style>
+
+        <title>The Pinger Project</title>
+
+    </head>
+
+    <body>
+
+        <header>
+            <div class="head-cont">
+                <b>PING</b>
+                <b class="single">A</b>
+                <b>DANGER</b>
+            </div>
+            <ul>
+                <li><a class="active-link" href="/pages/details.html" title="See requirements, 
+                    user personas, data model and more">Details</a></li>
+                <li><a href="/index.html" title="Go to home page">Home</a></li>
+                <li><a href="/" title="See user flow, UX flow. UI design and more">UI/UX</a></li>
+                <li><a href="/" title="See the codes, libraries and assets">Code</a></li>
+                <li><a href="/" title="See the application in action">Video</a></li>
+                <li><a href="/pages/coming-soon.html" title="comming soon">Try it</a></li>
+            </ul>
+        </header>
+
+        <main>
+            <section class="project">
+                <h2>
+                    <img class="icon-img" src="/asset/radiation.png"/>
+                    Core Features
+                </h2>
+                <ul>
+                    <li class="outer-item">
+                        <b class="items-header">Real-Time Alerts:</b>
+                        WebSockets for instant alert updates.
+                    </li>  
+                    <li class="outer-item">
+                        <b class="items-header">Multi-Channel Notifications:</b>
+                        In-App, Email and SMS alert notifications.
+                    </li>
+                    <li class="outer-item">
+                        <b class="items-header">Geo-Location:</b>
+                        Tag alerts with location info for map visualization.
+                    </li> 
+                    <li class="outer-item">
+                        <b class="items-header">Audit Trail:</b>
+                        Log alert creation and updates for traceability.
+                    </li>
+                    <li class="outer-item">
+                        <b class="items-header">Automatic Escalation:</b>
+                        Alerts escalate if unresolved after a set time.
+                    </li>
+                    <li class="outer-item">
+                        <b class="items-header">Alert Severity Levels:</b>
+                        Categorize alerts by severity (e.g., Low, Medium, High).
+                    </li>                        
+                </ul>
+            </section>
+
+            <hr>
+
+            <section class="project">
+                <h2>
+                    <img class="icon-img" src="/asset/radiation.png"/>
+                    System Architecture
+                </h2>
+                <ul>
+                    <li class="outer-item"><b class="items-header">Frontend (React):</b>
+                        <ul class="inner-items">
+                            <li>Intuitive UI for alert creation, real-time notifications, 
+                                and a dashboard for safety teams.</li>
+                            <li>WebSockets for real-time communication between frontend 
+                                and backend.</li>
+                            <li>Responsive design for mobile use.</li>
+                        </ul>
+                    </li>  
+                    <li class="outer-item"><b class="items-header">Backend (Python)</b>
+                        <ul class="inner-items">
+                            <li>Django API to handle alerts, user authentication, and 
+                            updates.</li>
+                            <li>PostgreSQL database for storing alerts and 
+                            user data.</li>
+                            <li>JWT for secure authentication.</li>
+                            <li>WebSockets for live alerts.</li>
+                        </ul>
+                    </li>                     
+                </ul>
+            </section>
+
+            <hr>
+
+            <section class="project">
+                <h2>
+                    <img class="icon-img" src="/asset/radiation.png"/>
+                    Scalability & Performance
+                </h2>
+                <ul>
+                    <li class="outer-item">
+                        <b class="items-header">Asynchronous Tasks:</b>
+                        Celery for background tasks (e.g., Email and SMS notifications).
+                    </li>
+                    <li class="outer-item">
+                        <b class="items-header">Caching:</b>
+                        Redis to cache frequently accessed data.
+                    </li>                          
+                </ul>
+            </section>
+
+            <hr>
+            
+            <section class="project">
+                <h2>
+                    <img class="icon-img" src="/asset/radiation.png"/>
+                    Security
+                </h2>
+                <ul>
+                    <li class="outer-item">
+                        <b class="items-header">Role-Based Access:</b>
+                        Different access levels for employees and safety staff.
+                    </li> 
+                    <li class="outer-item">
+                        <b class="items-header">Encryption:</b>
+                        SSL/TLS for secure communication, password hashing for 
+                        user credentials.
+                    </li>
+                    <li class="outer-item">
+                        <b class="items-header">Input Validation & Sanitization:</b>
+                        Prevent security vulnerabilities like SQL injection.
+                    </li>     
+                    <li class="outer-item">
+                        <b class="items-header">WebSockets Security: </b>
+                        Authenticate WebSocket connections and prevent data leaks.
+                    </li>                          
+                </ul>
+            </section>
+
+            <hr>
+
+            <section class="project">
+                <h2>
+                    <img class="icon-img" src="/asset/radiation.png"/>
+                    Testing & Monitoring
+                </h2>
+                <ul>
+                    <li class="outer-item">
+                        <b class="items-header">Testing:</b>
+                        Unit and integration tests with pytest (Python) and Jest (React).
+                    </li> 
+                    <li class="outer-item">
+                        <b class="items-header">Monitoring:</b>
+                        Prometheus and Grafana for system health; 
+                        centralized logging with Logstash.
+                    </li>                         
+                </ul>
+            </section>
+
+            <hr>
+
+            <section class="project">
+                <h2>
+                    <img class="icon-img" src="/asset/radiation.png"/>
+                    Deployment & CI/CD
+                </h2>
+                <ul>
+                    <li class="outer-item">
+                        <b class="items-header">Docker:</b>
+                         For containerization.
+                    </li> 
+                    <li class="outer-item">
+                        <b class="items-header">CI/CD:</b>
+                        Automate testing and deployment with GitHub Actions.
+                    </li>
+                    <li class="outer-item">
+                        <b class="items-header">Cloud Deployment:</b>
+                        For reliability, flexibility and cost.
+                    </li>                          
+                </ul>
+            </section>
+            
+        </main>
+
+
+
+
+    </body>
+</html>
