@@ -14,7 +14,7 @@
          }
 
          header {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
          }
 
          h2, .items-header {
@@ -124,10 +124,6 @@
                 font-size: 16px;
             }
 
-            header {
-                margin-bottom: 60px;
-            }
-
             .head-cont {
                 width: 100%;
             }
@@ -165,6 +161,7 @@
                 <li><a href="/" title="See the application in action">Video</a></li>
                 <li><a href="/pages/coming-soon.html" title="comming soon">Try it</a></li>
             </ul>
+            <hr>
         </header>
 
         <main>
@@ -353,7 +350,7 @@
                                 <tr>
                                     <td>type</td>
                                     <td>Enum</td>
-                                    <td>Nature of danger (Fire, Electrical, Chemical, etc.)</td>
+                                    <td>Nature of danger (Fire, Electrical, Chemical, Accident, incident etc.)</td>
                                 </tr>
                                 <tr>
                                     <td>location</td>
@@ -369,6 +366,11 @@
                                     <td>status</td>
                                     <td>Enum</td>
                                     <td>Current alert state (New, Acknowledged, Resolved)</td>
+                                </tr>
+                                <tr>
+                                    <td>description_notes</td>
+                                    <td>Text</td>
+                                    <td>Notes explaining reasons for the alert and the current situation</td>
                                 </tr>
                                 <tr>
                                     <td>created_date</td>
