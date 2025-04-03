@@ -95,6 +95,28 @@
             background-color: rgb(165, 141, 3); 
         }
 
+        .api {
+            background-color: rgb(241, 237, 214);
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid rgb(236, 232, 210);
+            text-align: left;
+        }
+        th {
+            background-color: rgb(165, 141, 3);
+            color: white;
+        }
+
 
 
         @media screen and (max-width: 768px) {
@@ -132,7 +154,7 @@
             <div class="head-cont">
                 <b>PING</b>
                 <b class="single">A</b>
-                <b>DANGER</b>
+                <b>CRISIS</b>
             </div>
             <ul>
                 <li><a class="active-link" href="/pages/details.html" title="See requirements, 
@@ -158,7 +180,7 @@
                     </li>  
                     <li class="outer-item">
                         <b class="items-header">Multi-Channel Notifications:</b>
-                        In-App, Email and SMS alert notifications.
+                        Web, Email and SMS alert notifications.
                     </li>
                     <li class="outer-item">
                         <b class="items-header">Geo-Location:</b>
@@ -172,9 +194,12 @@
                         <b class="items-header">Automatic Escalation:</b>
                         Alerts escalate if unresolved after a set time.
                     </li>
-                    <li class="outer-item">
-                        <b class="items-header">Alert Severity Levels:</b>
-                        Categorize alerts by severity (e.g., Low, Medium, High).
+                    <li class="outer-item"><b class="items-header">Admin Interface:</b>
+                        <ul class="inner-items">
+                            <li>View & manage all alerts.</li>
+                            <li>Assign or escalate alerts.</li>
+                            <li>Manage users & roles.</li>
+                        </ul>
                     </li>                        
                 </ul>
             </section>
@@ -196,7 +221,7 @@
                             <li>Responsive design for mobile use.</li>
                         </ul>
                     </li>  
-                    <li class="outer-item"><b class="items-header">Backend (Python)</b>
+                    <li class="outer-item"><b class="items-header">Backend (Python):</b>
                         <ul class="inner-items">
                             <li>Django API to handle alerts, user authentication, and 
                             updates.</li>
@@ -206,6 +231,221 @@
                             <li>WebSockets for live alerts.</li>
                         </ul>
                     </li>                     
+                </ul>
+            </section>
+
+            <hr>
+
+            <section class="project">
+                <h2>
+                    <img class="icon-img" src="/asset/radiation.png"/>
+                    API Endpoints
+                </h2>
+                <ul>
+                    <li class="outer-item"><b class="items-header">Alerts:</b>
+                        <ul class="inner-items">
+                            <li><span class="api">POST /alerts</span> – Create a new alert (type, location, 
+                                severity, description).</li>
+                            <li><span class="api">GET /alerts</span> – Retrieve all active alerts.</li>
+                            <li><span class="api">GET /alerts/{id}</span> – Get details of a specific alert.</li>
+                            <li><span class="api">PUT /alerts/{id}</span> – Update alert status (acknowledged, 
+                                resolved).</li>
+                            <li><span class="api">DELETE /alerts/{id}</span> – Remove an alert (admin only).</li>
+                        </ul>
+                    </li>  
+                    <li class="outer-item"><b class="items-header">Users & Authentication:</b>
+                        <ul class="inner-items">
+                            <li><span class="api">GET /users/{id}</span> – Get user profile details.</li>
+                            <li><span class="api">POST /auth/login</span> – Authenticate users (JWT-based).</li>
+                            <li><span class="api">Get /auth/logout</span> – Invalidate user tokens.</li>
+                        </ul>
+                    </li> 
+                    <li class="outer-item"><b class="items-header">Notifications:</b>
+                        <ul class="inner-items">
+                            <li><span class="api">POST /notifications/send</span> – Trigger email/SMS notifications.</li>
+                            <li><span class="api">GET /notifications</span> – Retrieve sent notifications.</li>
+                        </ul>
+                    </li>  
+                    <li class="outer-item"><b class="items-header">WebSockets:</b>
+                        <ul class="inner-items">
+                            <li><span class="api">/ws/alerts</span> – Real-time alert updates for active users.</li>
+                        </ul>
+                    </li>                    
+                </ul>
+            </section>
+
+            <hr>
+
+            <section class="project">
+                <h2>
+                    <img class="icon-img" src="/asset/radiation.png"/>
+                    Data Model
+                </h2>
+                <ul>
+                    <li class="outer-item"><b class="items-header">Users Table:</b>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>UUID (PK)</td>
+                                    <td>Unique user ID</td>
+                                </tr>
+                                <tr>
+                                    <td>name</td>
+                                    <td>String</td>
+                                    <td>User's full name</td>
+                                </tr>
+                                <tr>
+                                    <td>phone_number</td>
+                                    <td>String</td>
+                                    <td>Contact number for emergency notifications</td>
+                                </tr>
+                                <tr>
+                                    <td>email</td>
+                                    <td>String (Unique)</td>
+                                    <td>Login email</td>
+                                </tr>
+                                <tr>
+                                    <td>password</td>
+                                    <td>Hashed String</td>
+                                    <td>Secure password storage</td>
+                                </tr>
+                                <tr>
+                                    <td>role</td>
+                                    <td>Enum</td>
+                                    <td>Role-based access (Employee, Safety Officer, Admin)</td>
+                                </tr>
+                                <tr>
+                                    <td>last_login</td>
+                                    <td>Timestamp</td>
+                                    <td>Tracks the last time the user logged in</td>
+                                </tr>
+                                <tr>
+                                    <td>status</td>
+                                    <td>Enum</td>
+                                    <td>User account status (Active, Inactive, Suspended)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>  
+                    <li class="outer-item"><b class="items-header">Alerts Table:</b>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>UUID (PK)</td>
+                                    <td>Unique alert ID</td>
+                                </tr>
+                                <tr>
+                                    <td>type</td>
+                                    <td>Enum</td>
+                                    <td>Nature of danger (Fire, Electrical, Chemical, etc.)</td>
+                                </tr>
+                                <tr>
+                                    <td>location</td>
+                                    <td>String (or GeoJSON)</td>
+                                    <td>Alert location</td>
+                                </tr>
+                                <tr>
+                                    <td>severity</td>
+                                    <td>Enum</td>
+                                    <td>Urgency level (Low, Medium, High)</td>
+                                </tr>
+                                <tr>
+                                    <td>status</td>
+                                    <td>Enum</td>
+                                    <td>Current alert state (New, Acknowledged, Resolved)</td>
+                                </tr>
+                                <tr>
+                                    <td>created_date</td>
+                                    <td>Timestamp</td>
+                                    <td>The date and time the alert was created</td>
+                                </tr>
+                                <tr>
+                                    <td>reported_by</td>
+                                    <td>UUID (FK)</td>
+                                    <td>User who created the alert</td>
+                                </tr>
+                                <tr>
+                                    <td>acknowledged_by</td>
+                                    <td>UUID (FK)</td>
+                                    <td>Safety officer or admin who acknowledged the alert</td>
+                                </tr>
+                                <tr>
+                                    <td>resolution_notes</td>
+                                    <td>Text</td>
+                                    <td>Notes explaining how the alert was resolved</td>
+                                </tr>
+                                <tr>
+                                    <td>resolved_by</td>
+                                    <td>UUID (FK)</td>
+                                    <td>User who marked the alert as resolved</td>
+                                </tr>
+                                <tr>
+                                    <td>response_time</td>
+                                    <td>Integer</td>
+                                    <td>Time taken (in minutes) from alert creation to acknowledgment</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="outer-item"><b class="items-header">Notifications Table:</b>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>UUID (PK)</td>
+                                    <td>Unique notification ID</td>
+                                </tr>
+                                <tr>
+                                    <td>alert_id</td>
+                                    <td>UUID (FK)</td>
+                                    <td>Linked alert ID</td>
+                                </tr>
+                                <tr>
+                                    <td>recipient</td>
+                                    <td>UUID (FK)</td>
+                                    <td>User receiving the notification</td>
+                                </tr>
+                                <tr>
+                                    <td>method</td>
+                                    <td>Enum</td>
+                                    <td>Notification type (Email, SMS, Web)</td>
+                                </tr>
+                                <tr>
+                                    <td>sent_at</td>
+                                    <td>Timestamp</td>
+                                    <td>Time the notification was sent</td>
+                                </tr>
+                                <tr>
+                                    <td>status</td>
+                                    <td>Enum</td>
+                                    <td>Notification status (Pending, Sent, Failed)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>                      
                 </ul>
             </section>
 
@@ -247,12 +487,37 @@
                     </li>
                     <li class="outer-item">
                         <b class="items-header">Input Validation & Sanitization:</b>
-                        Prevent security vulnerabilities like SQL injection.
+                        Prevent security vulnerabilities like SQL injection & XSS attacks.
                     </li>     
                     <li class="outer-item">
                         <b class="items-header">WebSockets Security: </b>
                         Authenticate WebSocket connections and prevent data leaks.
-                    </li>                          
+                    </li> 
+                    <li class="outer-item"><b class="items-header">JWT Authentication:</b>
+                        <ul class="inner-items">
+                            <li>JWTs in Authorization headers instead of cookies 
+                                to prevent CSRF attacks.</li>
+                            <li>Store JWTs only in memory (not localStorage) 
+                                to avoid XSS risks.</li>
+                            <li>Implement short-lived access tokens with refresh 
+                                tokens for added security.</li>
+                        </ul>
+                    </li>
+                    <li class="outer-item"><b class="items-header">Obfuscate Sensitive Endpoints:</b>
+                            Use dynamically generated URLs for admin routes.</li> 
+                    <li class="outer-item"><b class="items-header">Rate-Limiting & IP Whitelisting:</b>
+                        <ul class="inner-items">
+                            <li>Protect critical API routes from brute-force attacks using rate 
+                                limiting (e.g., X requests per minute).</li>
+                            <li>Implement IP whitelisting for admin and internal endpoints.</li>
+                        </ul>
+                    </li> 
+                    <li class="outer-item"><b class="items-header">CORS Protection:</b>
+                        <ul class="inner-items">
+                            <li>Allow API requests only from trusted frontend domains.</li>
+                            <li>Block requests from unknown origins.</li>
+                        </ul>
+                    </li>                                                 
                 </ul>
             </section>
 
