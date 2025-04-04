@@ -327,7 +327,8 @@
                                 <tr>
                                     <td>role</td>
                                     <td>Enum</td>
-                                    <td>Role-based access (Employee, Safety Officer, Admin)</td>
+                                    <td>Role-based access (Employee, Safety Officer, Admin, 
+                                        Senior Safety Officer, External Emergency Responder)</td>
                                 </tr>
                                 <tr>
                                     <td>last_login</td>
@@ -375,7 +376,7 @@
                                 <tr>
                                     <td>status</td>
                                     <td>Enum</td>
-                                    <td>Current alert state (New, Acknowledged, Resolved)</td>
+                                    <td>Current alert state (New, Acknowledged, Resolved, escalated)</td>
                                 </tr>
                                 <tr>
                                     <td>description_notes</td>
@@ -443,7 +444,7 @@
                                 <tr>
                                     <td>method</td>
                                     <td>Enum</td>
-                                    <td>Notification type (Email, SMS, Web)</td>
+                                    <td>Notification type (Email, SMS)</td>
                                 </tr>
                                 <tr>
                                     <td>sent_at</td>
@@ -485,7 +486,60 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </li>                                            
+                    </li>
+                    <li class="outer-item"><b class="items-header">Audit Table:</b>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><b>id</b></td>
+                                    <td>UUID (PK)</td>
+                                    <td>Unique log entry ID</td>
+                                </tr>
+                                <tr>
+                                    <td><b>alert_id</b></td>
+                                    <td>UUID (FK)</td>
+                                    <td>Reference to the alert being acted upon</td>
+                                </tr>
+                                <tr>
+                                    <td><b>user_id</b></td>
+                                    <td>UUID (FK)</td>
+                                    <td>Who performed the action (worker, officer, admin)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>role</b></td>
+                                    <td>Enum</td>
+                                    <td>Role of the user (worker, safety_officer, admin)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>action</b></td>
+                                    <td>Enum</td>
+                                    <td>Type of action (Created, Acknowledged, Resolved.)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>timestamp</b></td>
+                                    <td>Timestamp</td>
+                                    <td>Time action occurred</td>
+                                </tr>
+                                <tr>
+                                    <td><b>ip_address</b></td>
+                                    <td>String</td>
+                                    <td>User's IP for security tracking</td>
+                                </tr>
+                                <tr>
+                                    <td><b>device_info</b></td>
+                                    <td>Text</td>
+                                    <td>Browser, mobile device details</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>                                         
                 </ul>
             </section>
 
