@@ -194,10 +194,15 @@
                     <li class="outer-item"><b class="items-header">Admin Interface:</b>
                         <ul class="inner-items">
                             <li>View & manage all alerts.</li>
-                            <li>Assign or escalate alerts.</li>
+                            <li>View & manage notifications.</li>
                             <li>Manage users & roles.</li>
+                            <li>View & manage safety tips.</li>
                         </ul>
-                    </li>                        
+                    </li>
+                    <li class="outer-item">
+                        <b class="items-header">Embedded Safety Tips:</b>
+                        Promoting a culture of prevention and preparedness.
+                    </li>                      
                 </ul>
             </section>
 
@@ -267,7 +272,12 @@
                         <ul class="inner-items">
                             <li><span class="api">/ws/alerts</span> – Real-time alert updates for active users.</li>
                         </ul>
-                    </li>                    
+                    </li>
+                    <li class="outer-item"><b class="items-header">Safety Tips:</b>
+                        <ul class="inner-items">
+                            <li><span class="api">GET /safety_tips</span> – Get safety tips at random.</li>
+                        </ul>
+                    </li>                          
                 </ul>
             </section>
 
@@ -447,7 +457,35 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </li>                      
+                    </li>
+                    <li class="outer-item"><b class="items-header">Safety Table:</b>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>UUID (PK)</td>
+                                    <td>Unique tips ID</td>
+                                </tr>
+                                <tr>
+                                    <td>category</td>
+                                    <td>Enum</td>
+                                    <td>Tips type (Personal, Machinery, Hazards, Fire, Slips, Handling, Emergency, Workplace, Supervision, Behavior)</td>
+                                </tr>
+                                <tr>
+                                    <td>tips_note</td>
+                                    <td>Text</td>
+                                    <td>Notes explaining the safety tips</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>                                            
                 </ul>
             </section>
 
