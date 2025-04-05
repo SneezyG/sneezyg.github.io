@@ -249,23 +249,22 @@
                             <li><span class="api">POST /alerts</span> – Create a new alert (type, location, 
                                 severity, description).</li>
                             <li><span class="api">GET /alerts</span> – Retrieve all active alerts.</li>
+                            <li><span class="api">POST /alerts/search</span> – Retrieve all alerts 
+                                that satisfy the search criteria.</li>
                             <li><span class="api">GET /alerts/{id}</span> – Get details of a specific alert.</li>
                             <li><span class="api">PUT /alerts/{id}</span> – Update alert status (acknowledged, 
                                 resolved).</li>
-                            <li><span class="api">DELETE /alerts/{id}</span> – Remove an alert (admin only).</li>
                         </ul>
                     </li>  
                     <li class="outer-item"><b class="items-header">Users & Authentication:</b>
                         <ul class="inner-items">
-                            <li><span class="api">GET /users/{id}</span> – Get user profile details.</li>
                             <li><span class="api">POST /auth/login</span> – Authenticate users (JWT-based).</li>
                             <li><span class="api">Get /auth/logout</span> – Invalidate user tokens.</li>
                         </ul>
                     </li> 
-                    <li class="outer-item"><b class="items-header">Notifications:</b>
+                    <li class="outer-item"><b class="items-header">Audit Trail:</b>
                         <ul class="inner-items">
-                            <li><span class="api">POST /notifications/send</span> – Trigger email/SMS notifications.</li>
-                            <li><span class="api">GET /notifications</span> – Retrieve sent notifications.</li>
+                            <li><span class="api">POST /audit/report</span> – Generate a report detailing alert history.</li>
                         </ul>
                     </li>  
                     <li class="outer-item"><b class="items-header">WebSockets:</b>
@@ -620,18 +619,18 @@
             <section class="project">
                 <h2>
                     <img class="icon-img" src="/asset/radiation.webp"/>
-                    Testing & Monitoring
+                    Testing & Documentation 
                 </h2>
                 <ul>
                     <li class="outer-item">
                         <b class="items-header">Testing:</b>
                         Unit and integration tests with pytest (Python), Jest (React) and postman(API).
-                    </li> 
+                    </li>
                     <li class="outer-item">
-                        <b class="items-header">Monitoring:</b>
-                        Prometheus and Grafana for system health; 
-                        centralized logging with Logstash.
-                    </li>                         
+                        <b class="items-header">Documentation:</b>
+                        drf-spectacular for auto-generated API docs from your Django REST Framework views 
+                        and storybook for documenting and visually testing React components.
+                    </li>                     
                 </ul>
             </section>
 
@@ -640,7 +639,7 @@
             <section class="project">
                 <h2>
                     <img class="icon-img" src="/asset/radiation.webp"/>
-                    Deployment & CI/CD
+                    Deployment & Monitoring
                 </h2>
                 <ul>
                     <li class="outer-item">
@@ -654,7 +653,12 @@
                     <li class="outer-item">
                         <b class="items-header">Cloud Deployment:</b>
                         For reliability, flexibility and cost.
-                    </li>                          
+                    </li>
+                    <li class="outer-item">
+                        <b class="items-header">Monitoring:</b>
+                        Prometheus and Grafana for system health; 
+                        centralized logging with Logstash.
+                    </li>                             
                 </ul>
             </section>
             
