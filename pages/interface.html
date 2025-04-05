@@ -19,6 +19,10 @@
 
          main {
             margin-bottom: 200px;
+            padding: 30px 50px 0 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
          }
 
         .head-cont {
@@ -62,9 +66,35 @@
             padding: 5px 20px;
             border-radius: 6px;
             color: white;
-            background-color: rgb(165, 141, 3);
+            background-color: rgb(194, 167, 16);
         }
 
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .column img {
+            margin-top: 20px;
+            vertical-align: middle;
+            border-radius: 20px;
+            border: 1px solid rgb(222, 229, 235);
+        }
+
+        .column img:hover{
+            transform: scale(105%);
+            border: 2px solid rgb(218, 189, 28);
+        }
+
+
+        @media screen and (max-width: 992px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
 
 
         @media screen and (max-width: 768px) {
@@ -72,11 +102,25 @@
                 width: 100%;
             }
 
+            main {
+                padding: 20px 25px 0 25px;
+            }
+
             header > ul > li {
                 padding: 0 15px;
             }
         }
-        
+
+
+        @media screen and (max-width: 576px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+
+
 
         </style>
 
@@ -105,6 +149,23 @@
         </header>
 
         <main>
+
+            <div class="column">
+                <a href="/asset/audit.png"><img src="/asset/audit.png" style="width:100%"></a>
+                <a href="/asset/escalate.png"><img src="/asset/escalate.png" style="width:100%"></a>
+            </div>
+            <div class="column">
+                <a href="/asset/respond.png"><img src="/asset/respond.png" style="width:100%"></a>
+                <a href="/asset/send.png"><img src="/asset/send.png" style="width:100%"></a>
+            </div>
+            <div class="column">
+                <a href="/asset/audit.png"><img src="/asset/audit.png" style="width:100%"></a>
+                <a href="/asset/escalate.png"><img src="/asset/escalate.png" style="width:100%"></a>
+            </div>
+            <div class="column">
+                <a href="/asset/manage.png"><img src="/asset/manage.png" style="width:100%"></a>
+                <a href="/asset/respond.png"><img src="/asset/respond.png" style="width:100%"></a>
+            </div>
             
         </main>
 
