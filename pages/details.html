@@ -305,9 +305,14 @@
                                     <td>Unique user ID</td>
                                 </tr>
                                 <tr>
-                                    <td>name</td>
+                                    <td>first_name</td>
                                     <td>String</td>
-                                    <td>User's full name</td>
+                                    <td>User's first name</td>
+                                </tr>
+                                <tr>
+                                    <td>last_name</td>
+                                    <td>String</td>
+                                    <td>User's last name</td>
                                 </tr>
                                 <tr>
                                     <td>phone_number</td>
@@ -325,10 +330,10 @@
                                     <td>Secure password storage</td>
                                 </tr>
                                 <tr>
-                                    <td>role</td>
+                                    <td>group</td>
                                     <td>Enum</td>
                                     <td>Role-based access (Employee, Safety Officer, Admin, 
-                                        Senior Safety Officer, External Emergency Responder)</td>
+                                        Bot, Senior Safety Officer, External Emergency Responder)</td>
                                 </tr>
                                 <tr>
                                     <td>last_login</td>
@@ -336,9 +341,9 @@
                                     <td>Tracks the last time the user logged in</td>
                                 </tr>
                                 <tr>
-                                    <td>status</td>
+                                    <td>is_active</td>
                                     <td>Enum</td>
-                                    <td>User account status (Active, Inactive, Suspended)</td>
+                                    <td>User account status (Active, Inactive)</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -365,8 +370,13 @@
                                 </tr>
                                 <tr>
                                     <td>location</td>
-                                    <td>String (or GeoJSON)</td>
+                                    <td>String</td>
                                     <td>Alert location</td>
+                                </tr>
+                                <tr>
+                                    <td>coordinate</td>
+                                    <td>GeoJSON</td>
+                                    <td>Coordinate Associated With An Alert</td>
                                 </tr>
                                 <tr>
                                     <td>severity</td>
