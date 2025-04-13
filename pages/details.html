@@ -343,7 +343,7 @@
                                     <td>group</td>
                                     <td>Enum</td>
                                     <td>Role-based access (Employee, Safety Officer, Admin, 
-                                        Bot, Senior Safety Officer, External Emergency Responder)</td>
+                                        Bot-agent, Senior Safety Officer, External Emergency Responder)</td>
                                 </tr>
                                 <tr>
                                     <td>last_login</td>
@@ -386,12 +386,12 @@
                                 <tr>
                                     <td>severity</td>
                                     <td>Enum</td>
-                                    <td>Urgency level (Low, Medium, High)</td>
+                                    <td>Urgency level (Low, Medium, High, Critical)</td>
                                 </tr>
                                 <tr>
                                     <td>status</td>
                                     <td>Enum</td>
-                                    <td>Current alert state (New, Acknowledged, Resolved, escalated)</td>
+                                    <td>Current alert state (New, Dismissed, Confirmed, Resolved, escalated)</td>
                                 </tr>
                                 <tr>
                                     <td>description_notes</td>
@@ -530,17 +530,17 @@
                                 <tr>
                                     <td><b>user_id</b></td>
                                     <td>UUID (FK)</td>
-                                    <td>Who performed the action (worker, officer, admin)</td>
+                                    <td>Who performed the action</td>
                                 </tr>
                                 <tr>
                                     <td><b>role</b></td>
                                     <td>Enum</td>
-                                    <td>Role of the user (worker, safety_officer, admin)</td>
+                                    <td>Role of the user (worker, safety_officer, admin, bot-agent)</td>
                                 </tr>
                                 <tr>
                                     <td><b>action</b></td>
                                     <td>Enum</td>
-                                    <td>Type of action (Created, Acknowledged, Resolved.)</td>
+                                    <td>Type of action (Created, Dismissed, Confirmed, Resolved, Escalated.)</td>
                                 </tr>
                                 <tr>
                                     <td><b>timestamp</b></td>
