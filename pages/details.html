@@ -249,12 +249,11 @@
                         <ul class="inner-items">
                             <li><span class="api">POST /alerts</span> – Create a new alert (category, location, 
                                 severity, description).</li>
-                            <li><span class="api">GET /alerts</span> – Retrieve all active alerts.</li>
-                            <li><span class="api">POST /alerts/search</span> – Retrieve all alerts 
+                            <li><span class="api">GET /alerts</span> – Retrieve all alerts.</li>
+                            <li><span class="api">GET /alerts?search={query}</span> – Retrieve all alerts 
                                 that satisfy the search criteria.</li>
                             <li><span class="api">GET /alerts/{id}</span> – Get details of a specific alert.</li>
-                            <li><span class="api">PUT /alerts/{id}</span> – Update alert status (acknowledged, 
-                                resolved).</li>
+                            <li><span class="api">PUT /alerts/{id}</span> – Update alert details.</li>
                         </ul>
                     </li>  
                     <li class="outer-item"><b class="items-header">Users & Authentication:</b>
@@ -265,7 +264,10 @@
                     </li> 
                     <li class="outer-item"><b class="items-header">Audit Trail:</b>
                         <ul class="inner-items">
-                            <li><span class="api">POST /audit/report</span> – Generate a report detailing alert history.</li>
+                            <li><span class="api">GET /audit</span> – Retrieve all alert logs.</li>
+                            <li><span class="api">GET /audit?search={query}</span> – Retrieve all alert 
+                                logs that satisfy the search criteria.</li>
+                            <li><span class="api">GET /audit/report?search={query}</span> – Generate a report detailing alert history.</li>
                         </ul>
                     </li>  
                     <li class="outer-item"><b class="items-header">WebSockets:</b>
@@ -275,7 +277,7 @@
                     </li>
                     <li class="outer-item"><b class="items-header">Safety Tips:</b>
                         <ul class="inner-items">
-                            <li><span class="api">GET /safety_tips</span> – Get safety tips at random.</li>
+                            <li><span class="api">GET /safety_tips</span> – Get latest safety tips.</li>
                         </ul>
                     </li>                          
                 </ul>
