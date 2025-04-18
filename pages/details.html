@@ -387,7 +387,7 @@
                                 <tr>
                                     <td>category</td>
                                     <td>Enum</td>
-                                    <td>Nature of danger (Fire, Electrical, Chemical, Accident, incident etc.)</td>
+                                    <td>Nature of danger (Fire, Electrical, Chemical, Accident, incident, Other)</td>
                                 </tr>
                                 <tr>
                                     <td>location</td>
@@ -420,9 +420,9 @@
                                     <td>User who created the alert</td>
                                 </tr>
                                 <tr>
-                                    <td>acknowledged_by</td>
+                                    <td>confirmed_by</td>
                                     <td>UUID (FK)</td>
-                                    <td>Safety officer or admin who acknowledged the alert</td>
+                                    <td>Safety officer or admin who confirmed the alert</td>
                                 </tr>
                                 <tr>
                                     <td>resolution_notes</td>
@@ -458,9 +458,9 @@
                                     <td>Unique notification ID</td>
                                 </tr>
                                 <tr>
-                                    <td>alert_id</td>
+                                    <td>alert</td>
                                     <td>UUID (FK)</td>
-                                    <td>Linked alert ID</td>
+                                    <td>Linked alert</td>
                                 </tr>
                                 <tr>
                                     <td>recipient</td>
@@ -468,7 +468,7 @@
                                     <td>User receiving the notification</td>
                                 </tr>
                                 <tr>
-                                    <td>method</td>
+                                    <td>medium</td>
                                     <td>Enum</td>
                                     <td>Notification type (Email, SMS)</td>
                                 </tr>
@@ -534,12 +534,12 @@
                                     <td>Unique log entry ID</td>
                                 </tr>
                                 <tr>
-                                    <td><b>alert_id</b></td>
+                                    <td><b>alert</b></td>
                                     <td>UUID (FK)</td>
                                     <td>Reference to the alert being acted upon</td>
                                 </tr>
                                 <tr>
-                                    <td><b>user_id</b></td>
+                                    <td><b>user</b></td>
                                     <td>UUID (FK)</td>
                                     <td>Who performed the action</td>
                                 </tr>
