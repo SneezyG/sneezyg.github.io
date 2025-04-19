@@ -246,22 +246,26 @@
                 <ul>
                     <li class="outer-item"><b class="items-header">Alerts:</b>
                         <ul class="inner-items">
-                            <li><span class="api">POST /alerts</span> – Create a new alert (category, location, 
-                                severity, description).</li>
-                            <li><span class="api">GET /alerts</span> – Retrieve all alerts.</li>
+                            <li><span class="api">POST /alerts</span> – Create a new alert <span>(Authenticated Users)</span></li>
+                            <li><span class="api">GET /alerts</span> – Retrieve all alerts <span>(Authenticated Admin, Safety & Super Users)</span></li>
+                            <li><span class="api">GET /alerts/latest</span> – Retrieve latest(today) alerts <span>(Authenticated Users)</span></li>
                             <li><span class="api">GET /alerts?search={query}</span> – Retrieve all alerts 
-                                that satisfy the search criteria.</li>
-                            <li><span class="api">GET /alerts/{id}</span> – Get details of a specific alert.</li>
-                            <li><span class="api">PUT /alerts/{id}</span> – Update alert details.</li>
+                                that satisfy the search criteria <span>(Authenticated Admin, Safety & Super Users)</span></li>
+                            <li><span class="api">GET /alerts/{id}</span> – Get details of a specific alert <span>(Authenticated Users)</span></li>
+                            <li><span class="api">GET /alerts/{user_id}</span> – Get alerts of a specific user <span>(Authenticated Users)</span></li>
+                            <li><span class="api">PUT /alerts/{id}</span> – Update alert details <span>(Authenticated Admin, Safety & Super Users)</span></li>
+                            <li><span class="api">PUT /alerts/bulk</span> – Bulk update alerts <span>(Authenticated Admin, Safety & Super Users)</span></li>
                         </ul>
                     </li>  
-                    <li class="outer-item"><b class="items-header">Users & Authentication:</b>
+                    <li class="outer-item"><b class="items-header">Users & Authentication: </b><span>Authenticated & Anonymous Users</span>
                         <ul class="inner-items">
                             <li><span class="api">POST /auth/login</span> – Authenticate users (JWT-based).</li>
-                            <li><span class="api">Get /auth/logout</span> – Invalidate user tokens.</li>
+                            <li><span class="api">POST /auth/logout</span> – Invalidate user tokens.</li>
+                            <li><span class="api">POST /auth/refresh</span> – Refresh users (JWT-based).</li>
+                            <li><span class="api">POST /auth/verify</span> – Verify user tokens.</li>
                         </ul>
                     </li> 
-                    <li class="outer-item"><b class="items-header">Audit Trail:</b>
+                    <li class="outer-item"><b class="items-header">Audit Trail: </b><span>Authenticated Admin, Safety & Super Users</span>
                         <ul class="inner-items">
                             <li><span class="api">GET /audit</span> – Retrieve all alert logs.</li>
                             <li><span class="api">GET /audit?search={query}</span> – Retrieve all alert 
@@ -269,12 +273,12 @@
                             <li><span class="api">GET /audit/report?search={query}</span> – Generate a report detailing alert history.</li>
                         </ul>
                     </li>  
-                    <li class="outer-item"><b class="items-header">WebSockets:</b>
+                    <li class="outer-item"><b class="items-header">WebSockets: </b><span>Authenticated Users</span>
                         <ul class="inner-items">
                             <li><span class="api">/ws/alerts</span> – Real-time alert updates for active users.</li>
                         </ul>
                     </li>
-                    <li class="outer-item"><b class="items-header">Safety Tips:</b>
+                    <li class="outer-item"><b class="items-header">Safety Tips: </b><span>Authenticated Users</span>
                         <ul class="inner-items">
                             <li><span class="api">GET /safety_tips</span> – Get latest safety tips.</li>
                         </ul>
@@ -343,8 +347,8 @@
                                 <tr>
                                     <td>group</td>
                                     <td>Enum</td>
-                                    <td>Role-based access (Employee, Safety Officer, Admin, 
-                                        Bot-agent, Senior Safety Officer, External Emergency Responder)</td>
+                                    <td>Role-based access (worker, safety_officer, admin, agent, 
+                                        senior_officer, external_emergency_responder)</td>
                                 </tr>
                                 <tr>
                                     <td>last_login</td>
@@ -546,7 +550,7 @@
                                 <tr>
                                     <td><b>role</b></td>
                                     <td>Enum</td>
-                                    <td>Role of the user (worker, safety_officer, admin, bot-agent)</td>
+                                    <td>Role of the user (worker, safety_officer, admin, agent)</td>
                                 </tr>
                                 <tr>
                                     <td><b>action</b></td>
