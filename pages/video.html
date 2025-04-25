@@ -66,6 +66,16 @@
             background-color: rgb(194, 167, 16);
         }
 
+        #loader {
+            width: 100px;
+            margin-top: 80px;
+        }
+
+        #videoBox {
+            display: none;
+        }
+
+
 
 
         @media screen and (max-width: 768px) {
@@ -83,6 +93,21 @@
 
         <link rel="icon" type="image/png" href="/asset/favicon.webp">
         <title>The Pinger Project</title>
+
+        <script>
+            window.addEventListener("DOMContentLoaded", function () {
+                const videoBox = document.getElementById("videoBox");
+                const videoFrame = document.querySelector("#videoBox > iframe");
+                const loader = document.getElementById("loader");
+                //console.log("I summoned another event");
+        
+                videoFrame.addEventListener("load", function () {
+                    loader.style.display = "none";
+                    videoBox.style.display = "block";
+                    //console.log("I was summoned");
+                });
+            });
+        </script>
 
     </head>
 
@@ -105,16 +130,13 @@
         </header>
 
         <main>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+            <div id="videoBox" style="position: relative; padding-bottom: 56.25%; height: 0;">
                 <iframe src="https://www.loom.com/embed/ebec0ac2151742ff917f333485190398?sid=3e240e9e-7634-4501-9a04-7b16799c0570" 
                 frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen 
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                 </iframe>
             </div>
+            <img id="loader" src="/asset/radiation-anime.webp"/>
         </main>
-
-
-
-
     </body>
 </html>
