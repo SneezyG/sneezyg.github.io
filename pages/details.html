@@ -112,6 +112,8 @@
             padding: 10px;
             border: 1px solid rgb(236, 232, 210);
             text-align: left;
+            word-break: break-word;
+            min-width: 80px;
         }
 
         th {
@@ -551,42 +553,42 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><b>id</b></td>
+                                    <td>id</td>
                                     <td>UUID (PK)</td>
                                     <td>Unique log entry ID</td>
                                 </tr>
                                 <tr>
-                                    <td><b>alert</b></td>
+                                    <td>alert</td>
                                     <td>UUID (FK)</td>
                                     <td>Reference to the alert being acted upon</td>
                                 </tr>
                                 <tr>
-                                    <td><b>user</b></td>
+                                    <td>user</td>
                                     <td>UUID (FK)</td>
                                     <td>Who performed the action</td>
                                 </tr>
                                 <tr>
-                                    <td><b>role</b></td>
+                                    <td>role</td>
                                     <td>Enum</td>
                                     <td>Role of the user (worker, safety_officer, admin, agent)</td>
                                 </tr>
                                 <tr>
-                                    <td><b>action</b></td>
+                                    <td>action</td>
                                     <td>Enum</td>
                                     <td>Type of action (Created, Dismissed, Confirmed, Resolved, Escalated.)</td>
                                 </tr>
                                 <tr>
-                                    <td><b>timestamp</b></td>
+                                    <td>timestamp</td>
                                     <td>Timestamp</td>
                                     <td>Time action occurred</td>
                                 </tr>
                                 <tr>
-                                    <td><b>ip_address</b></td>
+                                    <td>ip_address</td>
                                     <td>String</td>
                                     <td>User's IP for security tracking</td>
                                 </tr>
                                 <tr>
-                                    <td><b>device_info</b></td>
+                                    <td>device_info</td>
                                     <td>Text</td>
                                     <td>Browser, mobile device details</td>
                                 </tr>
